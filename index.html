@@ -9,7 +9,9 @@
   <meta
     name="description"
     content="NEXA is a modern virtual life game where every choice matters."
-  ><link rel="stylesheet" href="style.css">
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -21,16 +23,42 @@
 
   <main>
 
-    <section>
+    <section id="game">
+
       <h2>Welcome to NEXA</h2>
 
       <p>
         Build your life, make choices and create your own story.
       </p>
 
-      <button type="button">
+      <div class="player-stats">
+
+        <div>
+          <span>👤</span>
+          <strong id="playerName">Player</strong>
+        </div>
+
+        <div>
+          <span>💰</span>
+          <strong id="money">€500</strong>
+        </div>
+
+        <div>
+          <span>⚡</span>
+          <strong id="energy">100%</strong>
+        </div>
+
+        <div>
+          <span>😊</span>
+          <strong id="happiness">75%</strong>
+        </div>
+
+      </div>
+
+      <button type="button" onclick="startGame()">
         Start Your Life
       </button>
+
     </section>
 
   </main>
@@ -38,6 +66,8 @@
   <footer>
     <p>© 2026 NEXA</p>
   </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
