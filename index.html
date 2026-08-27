@@ -1,73 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <title>NEXA — Your Life. Your Choices.</title>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #08090d;
+  color: #ffffff;
+  min-height: 100vh;
+}
 
-  <meta
-    name="description"
-    content="NEXA is a modern virtual life game where every choice matters."
-  >
+header {
+  width: 100%;
+  padding: 25px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #20232b;
+  background: #0c0e13;
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
+header h1 {
+  font-size: 28px;
+  letter-spacing: 5px;
+}
 
-<body>
+header p {
+  color: #777d89;
+  font-size: 14px;
+}
 
-  <header>
-    <h1>NEXA</h1>
-    <p>Your life. Your choices.</p>
-  </header>
+main {
+  min-height: calc(100vh - 150px);
+  padding: 60px 6%;
+}
 
-  <main>
+#game {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    <section id="game">
+#game h2 {
+  font-size: 52px;
+  margin-bottom: 12px;
+}
 
-      <h2>Welcome to NEXA</h2>
+#game > p {
+  color: #858b97;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
 
-      <p>
-        Build your life, make choices and create your own story.
-      </p>
+.player-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 35px;
+}
 
-      <div class="player-stats">
+.player-stats div {
+  background: #11141b;
+  border: 1px solid #242833;
+  border-radius: 18px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: 0.2s;
+}
 
-        <div>
-          <span>👤</span>
-          <strong id="playerName">Player</strong>
-        </div>
+.player-stats div:hover {
+  transform: translateY(-3px);
+  border-color: #3b404c;
+}
 
-        <div>
-          <span>💰</span>
-          <strong id="money">€500</strong>
-        </div>
+.player-stats span {
+  font-size: 25px;
+}
 
-        <div>
-          <span>⚡</span>
-          <strong id="energy">100%</strong>
-        </div>
+.player-stats strong {
+  font-size: 21px;
+}
 
-        <div>
-          <span>😊</span>
-          <strong id="happiness">75%</strong>
-        </div>
+button {
+  border: none;
+  border-radius: 14px;
+  padding: 16px 30px;
+  background: #ffffff;
+  color: #08090d;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
-      </div>
+button:hover {
+  transform: translateY(-2px);
+  background: #e7e7e7;
+}
 
-      <button type="button" onclick="startGame()">
-        Start Your Life
-      </button>
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #20232b;
+  color: #555b66;
+  font-size: 13px;
+}
 
-    </section>
+@media (max-width: 800px) {
+  .player-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  </main>
+  #game h2 {
+    font-size: 38px;
+  }
+}
 
-  <footer>
-    <p>© 2026 NEXA</p>
-  </footer>
+@media (max-width: 500px) {
+  header {
+    padding: 20px;
+  }
 
-  <script src="script.js"></script>
+  header p {
+    display: none;
+  }
 
-</body>
-</html>
+  main {
+    padding: 40px 20px;
+  }
+
+  .player-stats {
+    grid-template-columns: 1fr;
+  }
+}
